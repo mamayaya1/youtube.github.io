@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>BigTube!</title>
+  <title>youtubeTube!</title>
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
   <div class="controller" title="Toggle header(slide up/slide down)">Toggle</div>
   <header>
 
-    <div class="logo">BigTube!</div>
+    <div class="logo">youtube!</div>
 
     <form action="." method="post">
       <input class="" type="text" name="url" placeholder="Youtube link here ..." value="" autocomplete="off">
@@ -52,7 +52,7 @@
       // Fetch the video id
       let videoid = inputObj.val().match(/(?:https?:\/{2})?(?:w{3}\.)?youtu(?:be)?\.(?:com|be)(?:\/watch\?v=|\/)([^\s&]+)/);
       if( videoid != null ) {
-        iframeObj.attr( 'src', 'https://www.youtube.com/embed/'+videoid[1]+'?autoplay=1' );
+        iframeObj.attr( 'src', 'https://www.youtube-nocookie.com/embed/'+videoid[1]+'?autoplay=1' );
         iframeObj.parent().fadeIn();
         inputObj.css({
           borderBottomColor: '#666666'
